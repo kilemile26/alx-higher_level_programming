@@ -2,4 +2,4 @@
 
 for lower in range(97, 123):
     if lower != 101 and lower != 113:
-        print(chr(lower), end="")
+        print("{}".format(chr(lower)), end="")
