@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for lower in range(97, 123)
-print(chr(lower), end="")
+
+for lower in range(97, 123):
+    if lower != 101 and lower != 113:
+        print(chr(lower), end="")
