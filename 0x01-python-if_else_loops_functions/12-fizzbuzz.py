@@ -15,3 +15,4 @@ def fizzbuzz():
             result += str(number) + " "
 #            #print(number, "", end="")
     return result.strip()
+fizzbuzz()
