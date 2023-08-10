@@ -14,6 +14,5 @@ def fizzbuzz():
     return result.strip()
 
 
-# Now you can call the fizzbuzz() function without immediate printing
 output = fizzbuzz()
-print(output)
+#print(output)
