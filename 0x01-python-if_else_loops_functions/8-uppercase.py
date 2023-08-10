@@ -2,8 +2,8 @@
 def uppercase(str):
     n = ""
     for c in str:
-        if str and ord(str) in range(97, 123):
-            n += chr(ord(s) - 32)
+        if ord(c) in range(97, 123):
+            n += chr(ord(c) - 32)
         else:
             n += c
     print("{}".format(n))
