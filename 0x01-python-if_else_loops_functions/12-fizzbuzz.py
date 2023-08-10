@@ -10,9 +10,9 @@ def fizzbuzz():
             result += "Fizz "
         else:
             result += str(number) + " "
-    
+
     return result.strip()
 
 # Now you can call the fizzbuzz() function without immediate printing
-#output = fizzbuzz()
+output = fizzbuzz()
 #print(output)
