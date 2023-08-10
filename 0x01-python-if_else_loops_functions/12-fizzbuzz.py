@@ -9,9 +9,9 @@ def fizzbuzz():
         elif number % 3 == 0:
             result += "Fizz "
         else:
-            result += str(number) + " "
+            result += str(number)
 
-#    return result.strip()
+    return result.strip()
 
 
 output = fizzbuzz()
