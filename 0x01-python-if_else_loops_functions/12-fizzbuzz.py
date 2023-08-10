@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def fizzbuzz():
+    result = ""
     for number in range(1, 101):
         if number % 3 == 0 and number % 5 == 0:
             result += "FizzBuzz "
@@ -8,7 +9,10 @@ def fizzbuzz():
         elif number % 3 == 0:
             result += "Fizz "
         else:
-            print(number, "", end="")
+            result += str(number) + " "
+    
+    return result.strip()
 
-
-fizzbuzz()
+# Now you can call the fizzbuzz() function without immediate printing
+output = fizzbuzz()
+print(output)
