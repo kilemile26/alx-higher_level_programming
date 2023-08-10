@@ -14,5 +14,6 @@ def fizzbuzz():
         else:
             result += str(number) + " "
 #            #print(number, "", end="")
-    return result.strip()
+
+
 fizzbuzz()
