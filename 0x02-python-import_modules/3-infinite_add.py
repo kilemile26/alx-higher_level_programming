@@ -1,7 +1,7 @@
 #!/usr/bin/python3#!/usr/bin/python3
-import sys
-
 if __name__ == "__main__":
-    args = sys.argv[1:]
-    total = sum(int(arg) for arg in args)
+    import sys
+
+
+    total = sum(int(arg) for arg in sys.arg[1:])
     print("{}".format(total))
