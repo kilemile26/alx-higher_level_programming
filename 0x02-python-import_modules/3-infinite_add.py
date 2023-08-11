@@ -5,5 +5,6 @@ if __name__ == "__main__":
 
     arg_tot = 0
     for arg in sys.argv:
-        arg_tot += int(arg)
+        if arg != sys.argv[0]:
+            arg_tot += int(arg)
     print(arg_tot)
