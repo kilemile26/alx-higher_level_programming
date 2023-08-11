@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4
-    names = dir(hidden_4)
-    for name in n:
-        if not name.startswith("__"):
-            print(name)
+    from variable_load_5 import a
+    print(a)
