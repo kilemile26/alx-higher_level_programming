@@ -3,6 +3,7 @@
 import sys
 from calculator_1 import add, sub, mul, div
 
+
 def main():
     nargs = len(sys.argv) - 1
     if nargs != 3:
@@ -21,6 +22,7 @@ def main():
 
     result = operators[operator](a, b)
     print("{} {} {} = {}".format(a, operator, b, result))
+
 
 if __name__ == "__main__":
     main()
