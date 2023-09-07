@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def matrix_divided(matrix, div):
     # Check if matrix is list of lists containing ints & floats
     if not isinstance(matrix, list) or not all(isinstance(row, list) and all(isinstance(num, (int, float)) for num in row) for row in matrix):
