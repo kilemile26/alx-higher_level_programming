@@ -1,6 +1,6 @@
-===============================
-user guide to 100-matrix_mul.py
-===============================
+====================================
+User guide to 101-lazy_matrix_mul.py
+====================================
 
 import unittest
 from contextlib import redirect_stdout
@@ -8,13 +8,13 @@ from io import StringIO
 import os
 import sys
 
-class TestMatrixMul(unittest.TestCase):
+class TestLazyMatrixMul(unittest.TestCase):
 
     def test_valid_matrix_multiplication(self):
         """
         Test valid matrix multiplication.
         """
-        matrix_mul = __import__('100-matrix_mul').matrix_mul
+        lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
         # Test case 1: 2x2 matrices
         m_a = [
@@ -25,7 +25,7 @@ class TestMatrixMul(unittest.TestCase):
             [2, 0],
             [1, 2]
         ]
-        result = matrix_mul(m_a, m_b)
+        result = lazy_matrix_mul(m_a, m_b)
         self.assertEqual(result, [[4, 4], [10, 8]])
 
         # Test case 2: 2x3 and 3x2 matrices
@@ -38,20 +38,20 @@ class TestMatrixMul(unittest.TestCase):
             [9, 10],
             [11, 12]
         ]
-        result = matrix_mul(m_a, m_b)
+        result = lazy_matrix_mul(m_a, m_b)
         self.assertEqual(result, [[58, 64], [139, 154]])
 
     def test_invalid_matrix_multiplication(self):
         """
         Test invalid matrix multiplication.
         """
-        matrix_mul = __import__('100-matrix_mul').matrix_mul
+        lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
         # Test case 1: Invalid empty matrices
         m_a = []
         m_b = [[1, 2], [3, 4]]
         with self.assertRaises(ValueError) as context:
-            matrix_mul(m_a, m_b)
+            lazy_matrix_mul(m_a, m_b)
         self.assertEqual(str(context.exception), "m_a can't be empty")
 
         # Test case 2: Matrices with incompatible dimensions
@@ -64,28 +64,47 @@ class TestMatrixMul(unittest.TestCase):
             [4, 5, 6]
         ]
         with self.assertRaises(ValueError) as context:
-            matrix_mul(m_a, m_b)
+            lazy_matrix_mul(m_a, m_b)
         self.assertEqual(str(context.exception), "m_a and m_b can't be multiplied")
 
     def test_invalid_matrix_types(self):
         """
         Test invalid matrix types.
         """
-        matrix_mul = __import__('100-matrix_mul').matrix_mul
+        lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
         # Test case 1: Non-list input
         m_a = "not a list"
         m_b = [[1, 2]]
         with self.assertRaises(ValueError) as context:
-            matrix_mul(m_a, m_b)
-        self.assertEqual(str(context.exception), "m_a must be a list or m_b must be a list")
+            lazy_matrix_mul(m_a, m_b)
+        self.assertEqual(str(context.exception), "Scalar operands are not allowed, use '*' instead")
 
         # Test case 2: Non-lists of lists
         m_a = [1, 2]
         m_b = [[3, 4]]
         with self.assertRaises(ValueError) as context:
-            matrix_mul(m_a, m_b)
-        self.assertEqual(str(context.exception), "m_a must be a list of lists or m_b must be a list of lists")
+            lazy_matrix_mul(m_a, m_b)
+        self.assertEqual(str(context.exception), "Scalar operands are not allowed, use '*' instead")
+
+    def test_matrix_floats(self):
+        """
+        Test matrix multiplication with floating-point numbers.
+        """
+        lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+        # Test case 1: 2x2 matrices with floats
+        m_a = [
+            [1.5, 2.5],
+            [3.5, 4.5]
+        ]
+        m_b = [
+            [2.0, 1.0],
+            [1.5, 2.5]
+        ]
+        result = lazy_matrix_mul(m_a, m_b)
+        expected_result = [[5.25, 9.75], [10.25, 17.75]]
+        self.assertEqual(result, expected_result)
 
 if __name__ == "__main__":
     unittest.main()
