@@ -3,10 +3,12 @@
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """Defines a rectangle."""
+    
+    number_of_instances = 0  # Class attribute
 
     def __init__(self, width=0, height=0):
-        """Initializes a new Rectangle.
+        """Initialize a Rectangle instance.
 
         Args:
             width (int): The width of the rectangle. Default is 0.
@@ -14,6 +16,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1  # Increment class attribute
 
     @property
     def width(self):
@@ -88,9 +91,14 @@ class Rectangle:
         return '\n'.join(['#' * self.__width] * self.__height)
 
     def __repr__(self):
-        """Return a string representation of the rectangle that can be used to recreate the object.
+        """Return a string representation of the rectangle for eval().
 
         Returns:
             str: A string representation of the rectangle.
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Print a message when an instance of Rectangle is deleted and decrement class attribute."""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
