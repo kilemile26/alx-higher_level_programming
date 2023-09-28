@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-"""Defines a Rectangle class"""
-
-
 class Rectangle:
     """
     This class defines a rectangle by its width and height.
@@ -95,11 +91,3 @@ class Rectangle:
             int: The perimeter of the rectangle.
         """
         return 2 * (self.__width + self.__height)
-    def __str__(self):
-    """
-    Return a string representation of the rectangle.
-
-    Returns:
-        str: The formatted string representation.
-    """
-    return "{} - {} => {} / {}".format(self.__width, self.__height, self.area(), self.perimeter())
