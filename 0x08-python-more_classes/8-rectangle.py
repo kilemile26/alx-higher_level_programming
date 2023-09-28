@@ -101,7 +101,7 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print a message when an instance of Rectangle is deleted and 
+        """Print a message when an instance of Rectangle is deleted and
         decrement class attribute."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
@@ -115,11 +115,11 @@ class Rectangle:
             rect_2 (Rectangle): The second rectangle.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of 
+            TypeError: If either rect_1 or rect_2 is not an instance of
             Rectangle.
 
         Returns:
-            Rectangle: The bigger rectangle or rect_1 if both have 
+            Rectangle: The bigger rectangle or rect_1 if both have
             the same area.
         """
         if not isinstance(rect_1, Rectangle):
