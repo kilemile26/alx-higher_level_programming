@@ -102,5 +102,4 @@ class Rectangle:
     Returns:
         str: The formatted string representation.
     """
-    return "{} - {} => {} / {}".format(
-            self.__width, self.__height, self.area(), self.perimeter())
+    return "{} - {} => {} / {}".format(self.__width, self.__height, self.area(), self.perimeter())
