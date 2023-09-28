@@ -88,7 +88,8 @@ class Rectangle:
         return '\n'.join(['#' * self.__width] * self.__height)
 
     def __repr__(self):
-        """Return a string representation of the rectangle that can be used to recreate the object.
+        """Return a string representation of the rectangle that can be used 
+        to recreate the object.
 
         Returns:
             str: A string representation of the rectangle.
