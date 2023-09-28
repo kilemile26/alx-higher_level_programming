@@ -69,13 +69,15 @@ class Rectangle:
 
     def perimeter(self):
         """Calculate the perimeter of the rectangle."""
-        return 0 if self.__width == 0 or self.__height == 0 else 2 * (self.__width + self.__height)
+        return 0 if self.__width == 0 or self.__height == 0 else 2 * (
+                self.__width + self.__height)
 
     def __str__(self):
         """Return a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
+        return "\n".join([str(self.print_symbol) * self.__width] * 
+                self.__height)
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval()."""
@@ -98,7 +100,8 @@ class Rectangle:
             Rectangle: The rectangle with the greater area.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance of 
+            Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
