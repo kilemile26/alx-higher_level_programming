@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, n):
-    # Check if a queen can be placed at board[row][col] without attacking others
+    # Check if queen can be placed at board[row][col] without attacking others
 
     # Check this row on the left side
     for i in range(col):
@@ -20,6 +21,7 @@ def is_safe(board, row, col, n):
             return False
 
     return True
+
 
 def solve_nqueens(n):
     if n < 4:
@@ -49,6 +51,7 @@ def solve_nqueens(n):
 
     for solution in solutions:
         print(solution)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
