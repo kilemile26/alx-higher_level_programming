@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Defines a rectangle."""
-    
+
     number_of_instances = 0  # Class attribute
     print_symbol = "#"  # Class attribute
 
@@ -89,7 +89,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'.join([str(self.print_symbol) * self.__width] * self.__height)
+        return '\n'.join(
+                [str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval().
@@ -100,6 +101,7 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print a message when an instance of Rectangle is deleted and decrement class attribute."""
+        """Print a message when an instance of Rectangle is deleted and 
+        decrement class attribute."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1

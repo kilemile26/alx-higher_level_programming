@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Defines a rectangle."""
-    
+
     number_of_instances = 0  # Class attribute
     print_symbol = "#"  # Class attribute
 
@@ -89,7 +89,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'.join([str(self.print_symbol) * self.__width] * self.__height)
+        return '\n'.join(
+                [str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval().
@@ -100,7 +101,8 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print a message when an instance of Rectangle is deleted and decrement class attribute."""
+        """Print a message when an instance of Rectangle is deleted and 
+        decrement class attribute."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -113,10 +115,12 @@ class Rectangle:
             rect_2 (Rectangle): The second rectangle.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance of 
+            Rectangle.
 
         Returns:
-            Rectangle: The bigger rectangle or rect_1 if both have the same area.
+            Rectangle: The bigger rectangle or rect_1 if both have 
+            the same area.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
