@@ -35,17 +35,17 @@ class LockedClass:
                     "'LockedClass' object has no attribute '{}'".format(name))
 
     def __getattribute__(self, name):
-            """
-            Get an instance attribute.
+    """
+    Get an instance attribute.
 
-            Args:
-            name (str): The name of the attribute.
+    Args:
+    name (str): The name of the attribute.
 
-            Raises:
-            AttributeError: If the attribute name is '__dict__'.
-            """
+    Raises:
+    AttributeError: If the attribute name is '__dict__'.
+    """
 
-            if name == "__dict__":
-                raise AttributeError(
-                        "'LockedClass' object has no attribute '__dict__'")
-            return super().__getattribute__(name)
+    if name == "__dict__":
+        raise AttributeError(
+                "'LockedClass' object has no attribute '__dict__'")
+        return super().__getattribute__(name)
