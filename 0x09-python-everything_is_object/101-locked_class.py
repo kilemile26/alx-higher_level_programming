@@ -32,7 +32,7 @@ class LockedClass:
             super().__setattr__(name, value)
         else:
             raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))
-            def __getattribute__(self, name):
+    def __getattribute__(self, name):
             """
             Get an instance attribute.
 
