@@ -7,7 +7,7 @@ except the specified ones
 
 class LockedClass:
     """
-    A class that prevents the user from dynamically creating 
+    A class that prevents the user from dynamically creating
     new instance attributes except for 'first_name'.
     """
 
