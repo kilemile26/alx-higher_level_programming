@@ -29,7 +29,7 @@ class LockedClass:
             AttributeError: If the attribute name is not 'first_name'.
         """
         if name == "first_name":
-            self.__dict__[name] = value
+            super().__setattr__(name, value)
         else:
             raise AttributeError(
                     "'LockedClass' object has no attribute '{}'".format(name))
