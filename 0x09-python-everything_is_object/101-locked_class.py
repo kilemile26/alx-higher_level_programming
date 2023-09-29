@@ -31,18 +31,21 @@ class LockedClass:
         if name == "first_name":
             super().__setattr__(name, value)
         else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))
+            raise AttributeError(
+                    "'LockedClass' object has no attribute '{}'".format(name))
+
     def __getattribute__(self, name):
             """
             Get an instance attribute.
 
             Args:
             name (str): The name of the attribute.
-            
+
             Raises:
             AttributeError: If the attribute name is '__dict__'.
             """
 
             if name == "__dict__":
-                raise AttributeError("'LockedClass' object has no attribute '__dict__'")
+                raise AttributeError(
+                        "'LockedClass' object has no attribute '__dict__'")
             return super().__getattribute__(name)
