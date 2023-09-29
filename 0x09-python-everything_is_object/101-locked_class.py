@@ -32,4 +32,4 @@ class LockedClass:
         if name == "first_name":
             self.__dict__[name] = value
         else:
-            raise AttributeError("[AttributeError] 'LockedClass' object has no attribute '__dict__'")
+            raise AttributeError("'LockedClass' object has no attribute ''".format(name))
