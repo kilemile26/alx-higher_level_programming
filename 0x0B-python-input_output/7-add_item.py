@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+"""
+This script loads a list from a JSON file, adds command line arguments to the list,
+and then saves the updated list back to the JSON file.
+"""
+
 import sys
 import os.path
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
-"""
-module that adds all arguments to a Python list, and then save
-them to a file
-"""
-
 
 # Filename for the JSON file
 filename = "add_item.json"
