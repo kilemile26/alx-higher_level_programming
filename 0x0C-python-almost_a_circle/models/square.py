@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""module that contains a definition of square class"""
+
+
 class Square(Rectangle):
     """Square class, inherits from Rectangle."""
 

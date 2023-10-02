@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""module that Defines a base model class."""
+
+
 class Base:
     """Base class for managing id attribute."""
 

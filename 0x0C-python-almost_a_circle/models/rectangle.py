@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""module that contains a definition of rectangle class"""
+
+
 from models.base import Base
 
 class Rectangle(Base):
