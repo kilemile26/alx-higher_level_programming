@@ -68,11 +68,16 @@ class Square(Rectangle):
             size (int): The size of the square.
         """
         super().__init__(size, size)
+        self.__size = size
+
+    def area(self):
+        """Compute the area of the square."""
+        return self.__size ** 2
 
     def __str__(self):
         """Return a string representation of the square."""
         return "[Square] {}/{}".format(
-                self._Rectangle__width, self._Rectangle__height)
+                self._Rectangle__size, self._Rectangle__size)
 
 
 if __name__ == "__main__":
