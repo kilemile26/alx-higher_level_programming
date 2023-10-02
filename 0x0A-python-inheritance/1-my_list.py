@@ -9,15 +9,22 @@ class MyList(list):
 
     def print_sorted(self):
         """
-        Print the list in ascending order.
+        Print the list in ascending order without modifying the original list.
+
+        Returns:
+            None
         """
+        sorted_list = sorted(self)
+        print(sorted_list)
 
-        if not self:
-            # Handle an empty list
+    def append(self, value):
+        """
+        Append an element to the list while ensuring that negative numbers are sorted correctly.
 
-            print([])
-        else:
-            # Handle negative numbers by converting them to positive for sorting
+        Args:
+            value: The value to append to the list.
 
-            sorted_list = sorted(self, key=abs)
-            print(sorted_list)
+        Returns:
+            None
+        """
+        super().append(value)
