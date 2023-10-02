@@ -26,7 +26,8 @@ class Student:
         Retrieve a dictionary representation of a Student instance.
 
         Returns:
-            dict: A dictionary containing the attributes of the Student instance.
+            dict: A dictionary containing the attributes of the
+            Student instance.
         """
         return {
             'first_name': self.first_name,
