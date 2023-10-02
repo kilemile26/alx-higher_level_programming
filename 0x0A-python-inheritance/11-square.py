@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for Rectangle class"""
+"""Module for Square class"""
 
 
 class BaseGeometry:
@@ -56,8 +56,23 @@ class Rectangle(BaseGeometry):
         """Return a string representation of the rectangle."""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
+class Square(Rectangle):
+    """A class representing a square."""
+
+    def __init__(self, size):
+        """Initialize a Square instance.
+
+        Args:
+            size (int): The size of the square.
+        """
+        super().__init__(size, size)
+
+    def __str__(self):
+        """Return a string representation of the square."""
+        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
+
 
 if __name__ == "__main__":
-    r = Rectangle(3, 5)
-    print(r)
-    print(r.area())
+    s = Square(13)
+    print(s)
+    print(s.area())
