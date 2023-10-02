@@ -33,6 +33,7 @@ def pascal_triangle(n):
 
     return triangle
 
+
 # Example usage:
 if __name__ == "__main__":
     result = pascal_triangle(5)
