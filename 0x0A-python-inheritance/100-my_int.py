@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""this module is used for defining inverted operators '==' and '!='"""
+"""
+This module defines a custom integer class with 
+inverted '==' and '!=' operators.
+"""
 
 
 class MyInt(int):
@@ -37,6 +40,5 @@ class MyInt(int):
         Returns:
             bool: True if self is equal to other, False otherwise.
         """
-        `# Invert the behavior of the inequality operator (!=)
+        # Invert the behavior of the inequality operator (!=)
         return super().__eq__(other)
-
