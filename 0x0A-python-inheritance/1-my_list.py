@@ -15,15 +15,3 @@ class MyList(list):
             None
         """
         print(sorted(self))
-
-    def append(self, value):
-        """
-        Append an element to the list while ensuring that negative numbers are sorted correctly.
-
-        Args:
-            value: The value to append to the list.
-
-        Returns:
-            None
-        """
-        super().append(value)
