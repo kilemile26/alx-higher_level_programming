@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module used for defining inverted equality int"""
+"""this module is used for defining inverted operators '==' and '!='"""
 
 
 class MyInt(int):
