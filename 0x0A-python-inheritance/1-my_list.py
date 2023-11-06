@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """a class MyList that inherits from list"""
-"""
 
 class MyList(list):
     """
@@ -15,23 +14,9 @@ class MyList(list):
             None
         """
         print("{}".format(sorted(self)))
-"""
-class MyList(list):
-     """
-     A custom list class that inherits from the built-in list class.
-     """
-    def print_sorted(self):
-    """
-    Print the list in ascending order without modifying the original list.
-
-    Returns:
-    None
-    """
-        sorted_list = sorted(self)
-        print(sorted_list)
+ 
 
 
-"""
 if __name__ == "__main__":
     my_list = MyList()
     my_list.append(3)
@@ -47,4 +32,3 @@ if __name__ == "__main__":
     my_list.append(-2)
     my_list.print_sorted()  # Should print [-2, -1, 1, 1, 2, 2, 3, 3, 4]
     print(my_list)  # Should print [-2, -1, 1, 1, 2, 2, 3, 3, 4]"
-"""
