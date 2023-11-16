@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module that contains a definition of square class"""
 
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """Square class, inherits from Rectangle."""
@@ -21,3 +22,14 @@ class Square(Rectangle):
     def __str__(self):
         """String representation of the Square instance."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+
+    @property
+    def size(self):
+        """Getter for size."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Setter for size."""
+        self.width = value
+        self.height = value
