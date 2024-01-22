@@ -7,7 +7,7 @@ if (!isNaN(occurrences) && occurrences > 0) {
     console.log('C is fun');
   }
 } else if (occurrences < 0) {
-
+  ;
 } else {
   console.log('Missing number of occurrences');
 }
