@@ -1,1 +1,1 @@
-this repo is explicitly for learning new things for python
+this repo is explicitly for learning higher level programming languages like python and javascript
