@@ -1,6 +1,5 @@
 ass MyList that inherits from list"""
 
-
 class MyList(list):
     """
     A custom list class that inherits from the built-in list class.
@@ -14,6 +13,7 @@ class MyList(list):
             None
         """
         print("{}".format(sorted(self)))
+ 
 
 
 if __name__ == "__main__":

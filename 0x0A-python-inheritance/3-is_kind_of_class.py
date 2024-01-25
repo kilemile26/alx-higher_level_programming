@@ -1,5 +1,6 @@
-
-n that returns True if the object is an instance of, or if the object
+#!/usr/bin/python3
+"""
+function that returns True if the object is an instance of, or if the object
 is an instance of a class that inherited from,
 the specified class ; otherwise False
 """
