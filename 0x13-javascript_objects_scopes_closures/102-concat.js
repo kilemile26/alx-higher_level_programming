@@ -21,4 +21,3 @@ const concatenatedContent = fileAContent + fileBContent;
 
 // Write the concatenated content to the destination file
 fs.writeFileSync(fileCPath, concatenatedContent);
-//console.log(`Files ${fileAPath} and ${fileBPath} successfully concatenated to ${fileCPath}`);
