@@ -2,7 +2,7 @@
 const { dict } = require('./101-data');
 
 // Function to reverse the keys and values in the dictionary
-function reverseDict(originalDict) {
+function reverseDict (originalDict) {
   const reversedDict = {};
 
   for (const key in originalDict) {
