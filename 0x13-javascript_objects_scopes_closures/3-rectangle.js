@@ -7,7 +7,8 @@ class Rectangle {
       this.width = w;
       this.height = h;
     }
-  print () {
+  print ()
+  {
     // Instance method to print the rectangle using the character X
     for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
