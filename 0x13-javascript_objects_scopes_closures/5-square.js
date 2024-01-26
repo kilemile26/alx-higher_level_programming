@@ -3,7 +3,7 @@
 const Rectangle = require('./4-rectangle');
 
 class Square extends Rectangle {
-  constructor(size) {
+  constructor (size) {
     // Calling the constructor of the parent class (Rectangle) using super()
     super(size, size);
   }
