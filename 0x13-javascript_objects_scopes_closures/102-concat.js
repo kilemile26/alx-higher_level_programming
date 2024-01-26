@@ -17,7 +17,7 @@ const fileAContent = fs.readFileSync(fileAPath, 'utf-8');
 const fileBContent = fs.readFileSync(fileBPath, 'utf-8');
 
 // Concatenate the contents of the two files
-const concatenatedContent = fileAContent + '\n' + fileBContent;
+const concatenatedContent = fileAContent + fileBContent;
 
 // Write the concatenated content to the destination file
 fs.writeFileSync(fileCPath, concatenatedContent);
