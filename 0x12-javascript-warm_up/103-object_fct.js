@@ -3,14 +3,12 @@
 const myObject = {
   type: 'object',
   value: 12,
-  //incr: function () {
-    //this.value++;
-  //}
+  incr: function ()
 };
 
 console.log(myObject);
 
-incr: function () {
+  function () {
     this.value++;
   }
 
