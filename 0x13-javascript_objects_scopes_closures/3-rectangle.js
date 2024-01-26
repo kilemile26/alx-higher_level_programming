@@ -1,6 +1,5 @@
-/*
 #!/usr/bin/node
-class Rectangle {
+/*class Rectangle {
   constructor(w, h) {
     if (w > 0 && h > 0) {
       // If w or h is equal to 0 or not a positive integer, create an empty object
@@ -21,7 +20,7 @@ class Rectangle {
 module.exports = Rectangle;
 */
 
-#!/usr/bin/node
+//#!/usr/bin/node
 class Rectangle {
   constructor(w, h) {
     if (w > 0 && h > 0) {
