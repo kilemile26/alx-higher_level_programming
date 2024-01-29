@@ -4,9 +4,9 @@ import sys
 
 if __name__ == "__main__":
     # Check if three arguments are provided
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
+    # if len(sys.argv) != 4:
+       # print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
+       # sys.exit(1)
 
     # Get credentials from command line arguments
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
