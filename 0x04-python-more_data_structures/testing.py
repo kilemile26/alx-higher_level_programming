@@ -1,5 +1,8 @@
-#!/usr/bin/env python3
-nums = [1, 2, 3]
-squared = list(map(lambda x: x**2, nums))
-print(squared)
+sentence = "python is awesome and python is fun"
+words = sentence.split()
 
+freq = {}
+for word in words:
+    freq[word] = freq.get(word, 0) + 1
+
+print(freq)
