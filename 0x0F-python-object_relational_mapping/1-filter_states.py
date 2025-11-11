@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the SQL query to select all states, ordered by id
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     # Fetch all the rows
     rows = cursor.fetchall()
@@ -36,3 +36,4 @@ if __name__ == "__main__":
     # Close the cursor and database connection
     cursor.close()
     db.close()
+
