@@ -11,11 +11,15 @@ import sys
 if __name__ == "__main__":
     # Check if three arguments are provided
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <database> <state_name>"
+              .format(sys.argv[0]))
         sys.exit(1)
 
     # Get credentials from command line arguments
-    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    state_name = sys.argv[4]
 
     # Connect to MySQL server
     db = MySQLdb.connect(
@@ -30,7 +34,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the SQL query to select all states, ordered by id
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT * FROM states" \
+    "WHERE name = '{}' ORDER BY id ASC".format(state_name)
     cursor.execute(query)
 
     # Fetch all the rows
@@ -43,4 +48,3 @@ if __name__ == "__main__":
     # Close the cursor and database connection
     cursor.close()
     db.close()
-    
