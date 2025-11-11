@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # Create a cursor object
     cursor = db.cursor()
-
+nano ~/.git-credentials
     # Execute the SQL query to select all states, ordered by id
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
