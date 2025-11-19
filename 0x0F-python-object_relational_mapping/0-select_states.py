@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Script that lists all states from dtbs in ascending order by ids.
+"""Script that lists all states from dtbs in ascending order by ids."""
 
 import MySQLdb
 import sys
