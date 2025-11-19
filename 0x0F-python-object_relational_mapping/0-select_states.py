@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Script that lists all states from dtbs in ascending order by ids."""
+"""
+Script that lists all states from dtbs in ascending order by ids.
+"""
 
 import MySQLdb
 import sys
@@ -22,19 +24,19 @@ if __name__ == "__main__":
         db=database
         )
 
-# Create a cursor object
-cursor = db.cursor()
+    # Create a cursor object
+    cursor = db.cursor()
 
-# Execute the SQL query to select all states, ordered by id
-cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    # Execute the SQL query to select all states, ordered by id
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-# Fetch all the rows
-rows = cursor.fetchall()
+    # Fetch all the rows
+    rows = cursor.fetchall()
 
-# Print the results
-for row in rows:
-    print(row)
+    # Print the results
+    for row in rows:
+        print(row)
 
-# Close the cursor and database connection
-cursor.close()
-db.close()
+    # Close the cursor and database connection
+    cursor.close()
+    db.close()
